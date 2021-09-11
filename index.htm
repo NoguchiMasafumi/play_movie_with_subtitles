@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; connect-src ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src * blob:; media-src * blob:">
+        <link rel="stylesheet" href="css/base.css">
+    </head>
+
+    <body onload="st_sub()">
+
+        <video id="v" controls autobuffer></video>
+        <div id="subtitle"></div><br />
+        <div id="sel_file" style="color:#8f8f8f;">
+          <label for="file" id="files_label" class="inps" >
+            Select srt file<input type="file" id="file" class="disp_no" name="file[]" multiple />
+          </label>
+          Sub Pos Top<input type="text" id="subtitles_position" value="58" class="inps w32">%
+          Font<input type="text" id="fnt_siz" value="30" class="inps w32">px
+          Delay<input type="text" id="delay" value="0" class="inps w32">Sec
+        </div>
+
+    </body>
+
+    <footer>
+        <script src="js/play_movie_with_subtitles.js"></script>
+    </footer>
+</html>

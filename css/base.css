@@ -1,0 +1,47 @@
+body{
+    text-align: center;
+    background-color:#000000;
+  }
+
+  .disp_no{display:none;}
+  .inps{background-color: #8f8f8f;text-align:right;}
+  .w32{width:32px;}
+
+  #sel_file{width:100%;text-align:right;}
+
+  #v{
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+      margin-bottom:15px;
+  }
+
+  #files_label{
+    margin-right:5px;
+    color:#000000;
+    font-size:12px;
+    padding:0px 5px 0px 5px;
+    cursor:pointer;
+  }
+
+  #subtitle{
+    z-index: 3;
+    left:50%;
+    top:58%;
+    line-height:120%;
+    height:3em;
+    /*display:table-cell;
+    vertical-align:bottom;*/
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position:absolute;
+    text-align:center;
+    transform: translate(-50%, -50%);
+    color:#cccccc;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right:auto;margin-left:auto;
+    text-shadow:3px 0px 1px #111, 0px 3px 1px #111, -3px 0px 1px #111, 0px -3px 1px #111, 3px 3px 1px #111, -3px 3px 1px #111, -3px -3px 1px #111, 3px -3px 1px #111;
+    /*   ,4px 0px 0px #ccc, 0px 4px 0px #ccc, -4px 0px 0px #ccc, 0px -4px 0px #ccc, 4px 4px 0px #ccc, -4px 4px 0px #ccc, -4px -4px 0px #ccc, 4px -4px 0px #ccc   */
+  }
