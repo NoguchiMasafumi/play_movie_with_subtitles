@@ -4,7 +4,7 @@
 アプリのインストール等したくない  
 ライトに再生したいという時用です  
 # 使い方
-右下に表示されるselect files をクリックして  
+右下に表示されるSelect Files をクリックして  
 srtファイルと動画ファイルの2つを選択するだけです
 # サンプル
 [index.htm](https://play-movie-with-subtitles.netlify.app/)
