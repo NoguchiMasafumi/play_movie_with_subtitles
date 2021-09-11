@@ -2,7 +2,6 @@ function st_sub(){
     document.getElementById('file').addEventListener('change', handleFileSelect, false);
 }
 
-
 function sleep(second) {
     return new Promise(resolve => {
         setTimeout(() => {
@@ -11,26 +10,20 @@ function sleep(second) {
     })
 }
 
-
-
 //******************************* srt file time style changer ***********************************
 function sec_calc(str_mat2){
-i_hh=str_mat2.substring(0,2)
-i_mm=str_mat2.substring(3,5)
-i_ss=str_mat2.substring(6,8)
-i_ms=str_mat2.substring(9,12)
-str_sec=(parseInt(i_hh*3600)+parseInt(i_mm*60)+parseInt(i_ss))+"."+(i_ms)
-int_sec=str_sec
-return int_sec
+    i_hh=str_mat2.substring(0,2)
+    i_mm=str_mat2.substring(3,5)
+    i_ss=str_mat2.substring(6,8)
+    i_ms=str_mat2.substring(9,12)
+    str_sec=(parseInt(i_hh*3600)+parseInt(i_mm*60)+parseInt(i_ss))+"."+(i_ms)
+    int_sec=str_sec
+    return int_sec
 }
 
-
-
+/**********************************/
 async function handleFileSelect(ev){
-
     var reader = new FileReader();
-
-
     for (let i = 0; i < ev.target.files.length; i++) {
         let file = ev.target.files[i];
         s_name=file.name
@@ -46,16 +39,22 @@ async function handleFileSelect(ev){
                 let subtitle = evt.target.result;
                 _subtitle(subtitle);
             }
-        }else{
-            reader.readAsText(file,"Shift_JIS");
         }
     }
 
 
+    for (let i = 0; i < ev.target.files.length; i++) {
+        let file = ev.target.files[i];
+        s_name=file.name
+        splt=s_name.split(".")
+        if(splt[1]=="srt"){
+            reader.readAsText(file,"Shift_JIS");
+        }
+    }    
+
+
+
 };
-
-
-
 
 //**************************** display subtitle **************************************
 function _subtitle(text) {
